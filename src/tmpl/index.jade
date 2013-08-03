@@ -1,7 +1,7 @@
 extends layout
 
 block gettingStarted
-  p Read the <a href="/getting-started">Getting Started</a> guide for instructions on using Grunt in your projects. Once you've done that, check out a <a href="/sample-gruntfile">Sample Gruntfile</a> and learn more about <a href="/configuring-tasks">Configuring Tasks</a>.
+  p 请先阅读<a href="/getting-started">入门指导</a>来获得在项目中使用grunt的指导. 然后可以研读 <a href="/sample-gruntfile">Gruntfile实例</a> 和 <a href="/configuring-tasks">配置任务</a>.
 
 block content
   .container
@@ -11,19 +11,19 @@ block content
           .home-header
             h1
               span.grunt-name Grunt
-              span.tag-line The JavaScript Task Runner
+              span.tag-line 基于JavaScript任务运行器
 
           .why.left
-            h2 Why use a task runner?
-            p In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it, a task runner can do most of that mundane work for you—and your team—with basically zero effort.
+            h2 为什么要使用任务运行器
+            p 简而言之：自动化。更少的工作花费在重复性的任务上，就像压缩、编译、单元测试、规范检测等等，减少你的工作量。一旦你配置好，它就不需要其他付出，为你和你的伙伴处理掉大部分例行工作
 
           .why.right
-            h2 Why use Grunt?
-            p The Grunt ecosystem is huge and it's growing every day. With literally hundreds of plugins to choose from, you can use Grunt to automate just about anything with a minimum of effort. If someone hasn't already built what you need, authoring and publishing your own Grunt plugin to npm is a breeze.
+            h2 那为什么用Grunt?
+            p Grunt 拥有庞大并且活跃的生态系统。数百个插件任你挑选。你几乎可以用Grunt以很小的代价来作任何事。如果没有你需要的，那就写一个发布到npm库里吧。
 
           .technology
-            h2 Available Grunt plugins
-            p Many of the tasks you need are already available as Grunt Plugins, and new plugins are published every day. While the <a href="/plugins">plugin listing</a> is more complete, here's a few you may have heard of.
+            h2 可用的Grunt插件
+            p 许多你需要的任务都已经实现成Grunt插件了，每天都有新的插件诞生.<a href="/plugins">插件列表</a>里列出了全部插件，比如这些大名鼎鼎的
             div
               a.technology(href='https://npmjs.org/package/grunt-contrib-coffee')
                 span.logo
@@ -51,8 +51,8 @@ block content
                   img(src='/img/logo-sylus.jpg', alt='Stylus')
 
           .grunt-preview
-            h2 Here's a preview!
-            p While installing grunt is simple, it's slightly more involved to get it running on your project.  To see what your effort will win you, take a look at this example output from running Grunt in a <a href="https://github.com/cowboy/jquery-tiny-pubsub">sample project</a>.
+            h2 看下预览
+            p 安装Grunt其实很简单，接下来让我们看看它在项目中的使用方式。  想知道你的付出有什么回报，不妨看看<a href="https://github.com/cowboy/jquery-tiny-pubsub">示例项目</a>中的Grunt输出
             // THX 2 @GF3 4 THE CSS <3!!
             pre.terminal
               span.command-prompt grunt
@@ -84,11 +84,42 @@ block content
               |<span class="green">Done, without errors.</span>
               | 
               |<span class="command-prompt active"><span class="active-prompt"></span></span>
-
+            // THX 2 @GF3 4 THE CSS <3!!
+            |中文翻译版(不是真实输出)
+            pre.terminal
+              span.command-prompt grunt
+              | 
+              |运行任务 "jshint:gruntfile" (jshint)
+              |<span class="green">&gt;&gt;</span> 1 个文件规范化通过.
+              | 
+              |运行任务 "jshint:src" (jshint)
+              |<span class="green">&gt;&gt;</span> 1 个文件规范化通过.
+              | 
+              |运行任务 "jshint:test" (jshint)
+              |<span class="green">&gt;&gt;</span> 1 个文件规范化通过.
+              | 
+              |运行任务 "qunit:files" (qunit)
+              |测试 test/tiny-pubsub.html....<span class="green">成功</span>
+              |<span class="green">&gt;&gt;</span> 4 个断言通过 (23ms)
+              | 
+              |运行任务 "clean:files" (clean)
+              |清理 "dist"...<span class="green">成功</span>
+              | 
+              |运行任务 "concat:dist" (concat)
+              |文件 "dist/ba-tiny-pubsub.js" 已创建.
+              | 
+              |运行任务 "uglify:dist" (uglify)
+              |文件 "dist/ba-tiny-pubsub.min.js" 已创建.
+              |未压缩大小: <span class="green">389</span> 字节.
+              |压缩后大小: <span class="green">119</span> 字节 gzip处理 (<span class="green">185</span> 字节减少).
+              | 
+              |<span class="green">完成, 没有错误.</span>
+              | 
+              |<span class="command-prompt active"><span class="active-prompt"></span></span>
           .who-uses-grunt
-            h2 Who uses Grunt?
-            p These are just a few companies and projects that are using Grunt. 
-              a(href='/who-uses-grunt') See more here.
+            h2 谁在用Grunt?
+            p 这有一些使用Grunt的公司与项目，
+              a(href='/who-uses-grunt')查看更多
             div
               a.technology(href='/who-uses-grunt')
                 span.logo
@@ -116,7 +147,7 @@ block content
                   img(src='/img/logo-bitovi.jpg', alt='Bitovi')
 
           .how-get-started
-            h2 How do I get started?
+            h2 从哪入手呢?
             block gettingStarted
 
       .span3
