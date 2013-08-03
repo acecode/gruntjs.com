@@ -5,42 +5,42 @@ block content
     .row-fluid
       .span9.page
         .hero-unit
-          h1 Grunt Plugins
+          h1 Grunt 插件
           != content
           section.main
             #loading
-              p Loading plugins...
+              p 加载插件...
             .plugin-list#plugins-contrib
             .plugin-list#plugins-all
       .span3
         .well.sidebar-nav.plugins-search
           .nav-header
             i.icon-power-cord
-            span Plugins
+            span 插件
           .search-options
             div.navbar-search.pull-left
-              input.search-query(type='text', placeholder='Search Grunt Plugins', disabled, autofocus)
-            p.sort-by Sort plugins list by
+              input.search-query(type='text', placeholder='搜索 Grunt 插件', disabled, autofocus)
+            p.sort-by 插件排列按
             .btn-group.dropdown
                 button.btn.btn-large.dropdown-toggle(data-toggle='dropdown')
-                  span.choice Title
+                  span.choice 标题
                   span.caret
                 ul.dropdown-menu
                   li
-                    a(href='#') Title
+                    a(href='#') 标题
                   li
-                    a(href='#', data-sort-desc='true') Modified
+                    a(href='#', data-sort-desc='true') 修改时间
                   //li
-                    a(href='#', data-sort-desc='true') Stars
+                    a(href='#', data-sort-desc='true') 星标
                   //li
-                    a(href='#', data-sort-desc='true') Forks
+                    a(href='#', data-sort-desc='true') Forks 下游热度
                   li
-                    a(href='#') Author
+                    a(href='#') 作者
                   li
-                    a(href='#', data-sort-desc='true') Version
+                    a(href='#', data-sort-desc='true') 版本
             .contrib-only
               label.checkbox
-                | Show <strong>contrib</strong> plugins first
+                | <strong>官方</strong> 插件优先
                 input#contrib-top(type='checkbox')
         include blocks/advertisements
   script(src='/js/plugins.js')
@@ -52,15 +52,15 @@ block content
     |<span class="name-description">
     |<span class="title"><%- el.displayName %></span>
     |<% if (el.author) { %>
-    |<span class="author <%= el.author.name === 'zzzz'? 'author-hide' : '' %>"> by <%= el.author.name %></span>
+    |<span class="author <%= el.author.name === 'zzzz'? 'author-hide' : '' %>"> 来自<%= el.author.name %></span>
     |<% } else { %>
     |<span class="author"></span>
     |<% } %>
     |<span class="desc"><%- el.description %><div class="hide"><%- el.keywords %></div></span>
     |</span>
     |<span class="summary">
-    |<span class="modified"><span>Modified</span> <time datetime="<%- el.time.modified %>"><%- el.time.modified %></time></span>
-    |<span class="gruntVersion"><span>Grunt Version</span> <%- el.gruntVersion || "N/A" %></span>
+    |<span class="modified"><span>修改于</span> <time datetime="<%- el.time.modified %>"><%- el.time.modified %></time></span>
+    |<span class="gruntVersion"><span>Grunt版本</span> <%- el.gruntVersion || "未指定" %></span>
     |</span>
     |</a>
     |</li>
